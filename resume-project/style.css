@@ -1,0 +1,118 @@
+:root {
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --radius: 12px;
+  --max-width: 900px;
+  --gap: 18px;
+  font-family: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: #0f172a;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 28px auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--gap);
+}
+
+.main {
+  background: var(--card);
+  padding: 22px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+header.head {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #63b3ed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h1 { margin: 0; }
+
+.muted { color: var(--muted); font-size: 13px; }
+
+.section { margin-top: 18px; }
+.section h2 { color: var(--accent); font-size: 15px; margin-bottom: 10px; }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  background: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e6edf6;
+  font-size: 13px;
+}
+
+.project-card {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e6edf6;
+}
+
+.project-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.project-desc {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sidebar {
+  background: white;
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+}
+
+.card { margin-bottom: 20px; }
+
+.contact-list { display: flex; flex-direction: column; gap: 6px; }
+
+.edu-item { margin-bottom: 12px; }
+.meta { color: var(--muted); font-size: 13px; }
+
+/* Responsive layout */
+@media (max-width: 920px) {
+  .container { grid-template-columns: 1fr; padding: 16px; }
+  .sidebar { order: 2; }
+}
+
+/* Print mode */
+@media print {
+  body { background: white; }
+  .container { box-shadow: none; }
+}
