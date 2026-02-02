@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | SentryPortal</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Student Login</h2>
+        <div id="error-box" class="error-msg" style="display:none"></div>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="captcha-box">
+                <div id="captchaImg" onclick="loadCaptcha()"></div>
+                <input type="text" id="captchaInput" placeholder="Enter Code" required>
+            </div>
+            <button type="submit" class="btn-primary">Sign In</button>
+        </form>
+        <p class="footer-link">New? <a href="/register.html">Register here</a></p>
+    </div>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

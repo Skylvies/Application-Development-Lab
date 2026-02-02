@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <div class="logo">StudentPortal</div>
+        <div id="nav-user" class="user-badge"></div>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </nav>
+    <main class="main-content">
+        <h1>Welcome, <span id="user-name"></span></h1>
+        <div class="grid">
+            <div class="card">
+                <h3>Update Profile</h3>
+                <form action="/api/update-profile" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="username" id="edit-username" placeholder="Username">
+                    <input type="email" name="email" id="edit-email" placeholder="Email">
+                    <label>Resume (PDF):</label><input type="file" name="resume">
+                    <button type="submit" class="btn-primary">Save Profile</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3>Academic Grades</h3>
+                <table>
+                    <thead><tr><th>Subject</th><th>Grade</th></tr></thead>
+                    <tbody id="grade-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
